@@ -27,7 +27,7 @@
         <a href="#specs">SPECS</a>
         <a href="#colors">COLORS</a>
       </nav>
-      <button class="cart-button" type="button" data-scroll-buy>BAG <span id="bagCount">0</span></button>
+      <button class="cart-button" type="button" id="openBag" aria-controls="bagDrawer" aria-expanded="false">BAG <span id="bagCount">0</span></button>
     </header>
 
     <main id="top">
@@ -138,6 +138,23 @@
       <p>MAKE SOME NOISE.</p>
       <div class="footer-bottom"><span>© 2026 CLACK STUDIO</span><span>DESIGNED FOR LOUD DESKS</span></div>
     </footer>
+
+    <div class="bag-overlay" id="bagOverlay" hidden></div>
+    <aside class="bag-drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true">
+      <div class="bag-head">
+        <div>
+          <span class="section-index">[ YOUR SELECTION ]</span>
+          <h2 id="bagTitle">YOUR BAG.</h2>
+        </div>
+        <button class="bag-close" type="button" id="closeBag" aria-label="Close bag">×</button>
+      </div>
+      <div class="bag-body" id="bagItems"></div>
+      <div class="bag-summary" id="bagSummary" hidden>
+        <div class="summary-row"><span>SUBTOTAL</span><strong id="bagTotal">€0.00</strong></div>
+        <p>Shipping is free. Taxes are calculated at checkout.</p>
+        <button class="button bag-continue" type="button" id="continueShopping">KEEP SHOPPING <span>←</span></button>
+      </div>
+    </aside>
 
     <div class="toast" id="toast" role="status" aria-live="polite">ADDED TO BAG — <span>BLOSSOM PINK</span></div>
     <script src="./script.js"></script>
