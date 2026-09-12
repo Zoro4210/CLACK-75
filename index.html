@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffe500" />
+    <meta name="description" content="Meet CLACK/75 — a wireless 75% mechanical keyboard with hot-swappable switches, a gasket mount and a satisfyingly chunky control knob." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffe500'/%3E%3Crect x='11' y='15' width='42' height='34' rx='5' fill='%23ff8ed8' stroke='%23000' stroke-width='4'/%3E%3Cpath d='M19 25h6m7 0h6m7 0h1M19 34h6m7 0h6m7 0h1M19 42h19m7 0h1' stroke='%23000' stroke-width='4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CLACK/75 — Small board. Big feeling.</title>
+  </head>
+  <body>
+    <div class="ticker" aria-label="Launch offer">
+      <div class="ticker-track">
+        <span>FREE SHIPPING THIS WEEK</span><span>★</span><span>HOT-SWAP EVERYTHING</span><span>★</span><span>3 DEVICES. ZERO CABLE DRAMA.</span><span>★</span>
+        <span aria-hidden="true">FREE SHIPPING THIS WEEK</span><span aria-hidden="true">★</span><span aria-hidden="true">HOT-SWAP EVERYTHING</span><span aria-hidden="true">★</span><span aria-hidden="true">3 DEVICES. ZERO CABLE DRAMA.</span><span aria-hidden="true">★</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CLACK home"><span class="brand-mark">⌨</span> CLACK<span>/75</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#feel">THE FEEL</a>
+        <a href="#specs">SPECS</a>
+        <a href="#colors">COLORS</a>
+      </nav>
+      <button class="cart-button" type="button" data-scroll-buy>BAG <span id="bagCount">0</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> INTRODUCING THE B75 PRO</div>
+          <h1>SMALL BOARD.<br /><em>BIG</em> FEELING.</h1>
+          <p class="hero-lede">A wireless 75% mechanical keyboard built for deep focus, fast play and desks that refuse to be boring.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#colors">CHOOSE YOUR COLOR <span>↘</span></a>
+            <a class="text-link" href="#feel">WHY IT CLACKS <span>↓</span></a>
+          </div>
+          <div class="mini-proof" aria-label="Product highlights">
+            <div><strong>2.4G</strong><span>NO-LAG WIRELESS</span></div>
+            <div><strong>80</strong><span>HOT-SWAP KEYS</span></div>
+            <div><strong>4000</strong><span>MAH BATTERY</span></div>
+          </div>
+        </div>
+
+        <div class="product-stage color-blossom" id="productStage">
+          <div class="sticker sticker-top">75%<br /><small>FULL POWER</small></div>
+          <div class="burst" aria-hidden="true">NEW!</div>
+          <div class="product-image-wrap">
+            <img src="./assets/clack75-keyboard.jpeg" alt="CLACK/75 mechanical keyboard in Blossom pink" id="productImage" />
+          </div>
+          <div class="stage-bottom">
+            <span id="stageColor">01 — BLOSSOM</span>
+            <span>TURN IT UP ↗</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto" id="feel">
+        <div class="manifesto-title">
+          <span class="section-index">[ 01 ]</span>
+          <h2>TYPE LIKE<br />YOU MEAN IT.</h2>
+        </div>
+        <div class="manifesto-card yellow-card">
+          <span class="feature-icon">⌁</span>
+          <h3>CUSHIONED, NOT MUSHY.</h3>
+          <p>A five-layer gasket mount softens every landing while the polycarbonate plate keeps each keystroke crisp and alive.</p>
+        </div>
+        <div class="manifesto-card mint-card">
+          <span class="feature-icon">↯</span>
+          <h3>SWITCH IT YOUR WAY.</h3>
+          <p>Pull, swap, repeat. The hot-swap PCB welcomes 3-pin and 5-pin switches — no soldering iron, no commitment issues.</p>
+        </div>
+      </section>
+
+      <section class="sound-lab" aria-labelledby="soundTitle">
+        <div class="sound-copy">
+          <span class="section-index">[ 02 ]</span>
+          <h2 id="soundTitle">YOUR DESK.<br />YOUR <span>SOUND.</span></h2>
+          <p>Every layer is tuned to take the hollow out and leave the good stuff in. Tap the keys and find your rhythm.</p>
+        </div>
+        <div class="key-tester" aria-label="Interactive keyboard sound visualizer">
+          <div class="wave" id="wave" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="keys">
+            <button type="button" class="test-key" data-key="C">C</button>
+            <button type="button" class="test-key pink" data-key="L">L</button>
+            <button type="button" class="test-key" data-key="A">A</button>
+            <button type="button" class="test-key purple" data-key="C">C</button>
+            <button type="button" class="test-key wide" data-key="K">K</button>
+          </div>
+          <div class="tester-caption"><span id="keyMessage">PRESS A KEY</span><span>VOLUME: SATISFYING</span></div>
+        </div>
+      </section>
+
+      <section class="specs" id="specs">
+        <div class="specs-head">
+          <span class="section-index">[ 03 ]</span>
+          <h2>LESS BOARD.<br />MORE <span>EVERYTHING.</span></h2>
+        </div>
+        <div class="spec-grid">
+          <article class="spec-card coral"><span>01</span><div class="spec-symbol">⌁</div><h3>TRIPLE MODE</h3><p>Bluetooth 5.0, 2.4G wireless and USB-C. Jump between three devices without breaking flow.</p></article>
+          <article class="spec-card cream"><span>02</span><div class="spec-symbol">◉</div><h3>TACTILE CONTROL</h3><p>A metal rotary knob puts volume and playback exactly one satisfying click away.</p></article>
+          <article class="spec-card purple"><span>03</span><div class="spec-symbol">✦</div><h3>SOUTH-FACING RGB</h3><p>16.8 million ways to glow — vivid, smooth and easy on your keycap profiles.</p></article>
+          <article class="spec-card blue"><span>04</span><div class="spec-symbol">⌂</div><h3>MAC + WINDOWS</h3><p>Switch systems in seconds. All the right legends and shortcuts are already on board.</p></article>
+        </div>
+      </section>
+
+      <section class="configurator" id="colors">
+        <div class="config-visual color-blossom" id="configVisual">
+          <div class="big-number">75</div>
+          <img src="./assets/clack75-keyboard.jpeg" alt="CLACK/75 mechanical keyboard color preview" id="configImage" />
+          <div class="angle-label">COMPACT<br />NOT COMPROMISED.</div>
+        </div>
+        <div class="config-panel">
+          <span class="section-index">[ 04 / MAKE IT YOURS ]</span>
+          <h2>PICK YOUR<br /><span>PERSONALITY.</span></h2>
+          <p class="selection-label">COLOR — <strong id="selectedColor">BLOSSOM PINK</strong></p>
+          <div class="swatches" role="radiogroup" aria-label="Keyboard color">
+            <button class="swatch active" type="button" data-color="blossom" data-label="BLOSSOM PINK" aria-label="Blossom Pink" aria-checked="true" role="radio"><span></span></button>
+            <button class="swatch cocoa" type="button" data-color="cocoa" data-label="COCOA CREAM" aria-label="Cocoa Cream" aria-checked="false" role="radio"><span></span></button>
+            <button class="swatch butter" type="button" data-color="butter" data-label="BUTTER POP" aria-label="Butter Pop" aria-checked="false" role="radio"><span></span></button>
+            <button class="swatch mono" type="button" data-color="mono" data-label="INK + PAPER" aria-label="Ink and Paper" aria-checked="false" role="radio"><span></span></button>
+          </div>
+          <div class="price-row"><div><small>FROM</small><strong>€109.99</strong></div><span>IN STOCK<br />SHIPS IN 24H</span></div>
+          <button class="button button-buy" type="button" id="addToBag">ADD TO BAG <span>→</span></button>
+          <p class="shipping-note">FREE SHIPPING · 30-DAY RETURNS · 1-YEAR WARRANTY</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo">CLACK<span>/75</span></div>
+      <p>MAKE SOME NOISE.</p>
+      <div class="footer-bottom"><span>© 2026 CLACK STUDIO</span><span>DESIGNED FOR LOUD DESKS</span></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">ADDED TO BAG — <span>BLOSSOM PINK</span></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
