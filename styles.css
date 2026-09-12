@@ -90,7 +90,6 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); line-height: .87; letter-spacing: -.07
 .test-key { flex: 1; aspect-ratio: 1; min-width: 0; border: 3px solid var(--ink); background: var(--yellow); box-shadow: 5px 6px 0 #000; font-size: clamp(1rem, 3vw, 2rem); font-weight: 700; cursor: pointer; }
 .test-key.pink { background: var(--pink); }.test-key.purple { background: var(--purple); }.test-key.wide { flex: 1.35; background: var(--mint); }
 .test-key:active, .test-key.pressed { transform: translate(5px,6px); box-shadow: none; }
-.tester-caption { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; font: 500 .7rem "DM Mono", monospace; }
 
 .specs { background: var(--yellow); padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 5vw, 5rem); border-bottom: var(--border); }
 .specs-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 3.5rem; }
@@ -150,7 +149,7 @@ footer > p { font-size: 1.5rem; margin: 1.4rem 0 0; font-weight: 700; }
   .mini-proof strong { font-size: 1.25rem; }.mini-proof span { font-size: .55rem; }.mini-proof div { padding: .7rem; }
   .product-stage { min-height: 390px; }.product-stage::before { inset: 16% -35%; }.burst { width: 82px; height: 82px; font-size: .9rem; }.sticker { font-size: 1.3rem; }
   .manifesto { grid-template-columns: 1fr; }.manifesto-card { border-left: 0; min-height: 350px; }.feature-icon { font-size: 4rem; }
-  .sound-lab { padding-block: 4rem; }.keys { gap: .4rem; }.test-key { border-width: 2px; box-shadow: 3px 4px 0 #000; }.tester-caption { font-size: .57rem; }
+  .sound-lab { padding-block: 4rem; }.keys { gap: .4rem; }.test-key { border-width: 2px; box-shadow: 3px 4px 0 #000; }
   .specs-head { display: block; }.specs-head h2 { text-align: left; margin-top: 1.5rem; }.spec-grid { grid-template-columns: 1fr; }.spec-card { min-height: 300px; }
   .config-visual { min-height: 390px; }.angle-label { right: 1rem; bottom: 1rem; }.swatch { width: 48px; height: 48px; }
   footer { grid-template-columns: 1fr; }.footer-logo { font-size: 22vw; }.footer-bottom { gap: 1rem; }

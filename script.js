@@ -35,7 +35,6 @@ function applyColor(color) {
 swatches.forEach((button) => button.addEventListener("click", () => applyColor(button.dataset.color)));
 
 const wave = document.querySelector("#wave");
-const keyMessage = document.querySelector("#keyMessage");
 const testKeys = document.querySelectorAll(".test-key");
 
 function animateKey(button) {
@@ -43,7 +42,6 @@ function animateKey(button) {
   wave.classList.remove("active");
   void wave.offsetWidth;
   wave.classList.add("active");
-  keyMessage.textContent = `${button.dataset.key} — THOCK!`;
   window.setTimeout(() => button.classList.remove("pressed"), 130);
 }
 
