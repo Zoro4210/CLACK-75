@@ -19,17 +19,18 @@ a { color: inherit; }
 button { color: inherit; }
 
 .ticker { overflow: hidden; background: var(--ink); color: white; border-bottom: var(--border); font: 500 .8rem "DM Mono", monospace; letter-spacing: .08em; white-space: nowrap; }
-.ticker-track { display: flex; width: max-content; gap: 2.2rem; padding: .65rem 0; animation: ticker 24s linear infinite; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+.ticker-track { display: flex; width: max-content; gap: 2.2rem; padding: .65rem 0; animation: ticker 22s linear infinite; will-change: transform; }
+.ticker-group { display: flex; flex-shrink: 0; gap: 2.2rem; }
+@keyframes ticker { to { transform: translateX(calc(-50% - 1.1rem)); } }
 
 .site-header { height: 82px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 clamp(1rem, 4vw, 4.5rem); border-bottom: var(--border); background: var(--paper); position: sticky; top: 0; z-index: 20; }
 .brand { justify-self: start; text-decoration: none; font-size: 1.6rem; font-weight: 700; letter-spacing: -.06em; }
 .brand span { color: #e93d97; }
-.brand-mark { display: inline-grid; place-items: center; color: var(--ink) !important; background: var(--yellow); border: 2px solid; width: 36px; height: 32px; margin-right: .35rem; box-shadow: 3px 3px 0; font-size: 1rem; }
 nav { display: flex; gap: clamp(1.25rem, 3vw, 3rem); }
 nav a { text-decoration: none; font: 500 .82rem "DM Mono", monospace; }
 nav a:hover { text-decoration: underline 3px; text-underline-offset: 7px; }
-.cart-button { justify-self: end; border: 2px solid; background: var(--pink); padding: .65rem .8rem; font: 500 .8rem "DM Mono", monospace; cursor: pointer; box-shadow: 3px 3px 0; }
+.cart-button { justify-self: end; border: 2px solid; background: var(--pink); padding: .65rem .8rem; font: 500 .8rem "DM Mono", monospace; cursor: pointer; box-shadow: 3px 3px 0; transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease; }
+.cart-button:hover { background: var(--yellow); transform: translate(-2px,-2px); box-shadow: 6px 6px 0; }
 .cart-button:active { transform: translate(3px,3px); box-shadow: none; }
 .cart-button span { display: inline-grid; place-items: center; border-left: 2px solid; margin-left: .45rem; padding-left: .7rem; }
 
@@ -46,9 +47,9 @@ h1 em { color: var(--pink); font-style: normal; -webkit-text-stroke: 3px var(--i
 .button { border: var(--border); box-shadow: 6px 6px 0 var(--ink); padding: 1rem 1.2rem; font: 600 .88rem "DM Mono", monospace; text-decoration: none; display: inline-flex; align-items: center; justify-content: space-between; gap: 2rem; cursor: pointer; transition: transform .12s, box-shadow .12s; }
 .button:hover { transform: translate(-2px,-2px); box-shadow: 9px 9px 0 var(--ink); }
 .button:active { transform: translate(6px,6px); box-shadow: none; }
-.button-dark { background: var(--ink); color: white; }
+.button-dark { background: var(--ink); color: white; box-shadow: 6px 6px 0 var(--yellow); }
+.button-dark:hover { box-shadow: 9px 9px 0 var(--yellow); }
 .button-dark span { color: var(--yellow); font-size: 1.2rem; }
-.text-link { font: 600 .82rem "DM Mono", monospace; text-underline-offset: 5px; }
 .mini-proof { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid; }
 .mini-proof div { padding: 1rem; min-width: 0; }
 .mini-proof div + div { border-left: 2px solid; }
@@ -173,7 +174,7 @@ footer > p { font-size: 1.5rem; margin: 1.4rem 0 0; font-weight: 700; }
 @media (max-width: 680px) {
   .site-header { height: 70px; grid-template-columns: 1fr auto; padding-inline: 1rem; }.site-header nav { display: none; }.brand { font-size: 1.35rem; }
   .hero { min-height: auto; }.hero-copy { padding: 3.5rem 1rem 2rem; } h1 { font-size: clamp(3.7rem, 20vw, 6rem); }
-  .hero-actions { align-items: stretch; flex-direction: column; gap: 1.2rem; }.text-link { text-align: center; }.button { width: 100%; }
+  .hero-actions { align-items: stretch; flex-direction: column; gap: 1.2rem; }.button { width: 100%; }
   .mini-proof strong { font-size: 1.25rem; }.mini-proof span { font-size: .55rem; }.mini-proof div { padding: .7rem; }
   .product-stage { min-height: 390px; }.product-stage::before { inset: 16% -35%; }.burst { width: 82px; height: 82px; font-size: .9rem; }.sticker { font-size: 1.3rem; }
   .manifesto { grid-template-columns: 1fr; }.manifesto-card { border-left: 0; min-height: 350px; }.feature-icon { font-size: 4rem; }
