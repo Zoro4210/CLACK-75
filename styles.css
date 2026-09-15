@@ -62,6 +62,7 @@ h1 em { color: var(--pink); font-style: normal; -webkit-text-stroke: 3px var(--i
 .product-image-wrap { position: relative; z-index: 2; width: 88%; transform: rotate(2deg); filter: drop-shadow(13px 17px 0 rgba(17,17,15,.95)); transition: transform .2s; }
 .product-image-wrap:hover { transform: rotate(0) scale(1.02); }
 .product-image-wrap img { width: 100%; display: block; mix-blend-mode: multiply; filter: contrast(1.07) saturate(1.1); transition: filter .3s; }
+.product-image-wrap video { width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover; }
 .sticker { z-index: 4; position: absolute; background: white; border: var(--border); box-shadow: 6px 6px 0; padding: .8rem 1.1rem; font-weight: 700; font-size: 1.8rem; line-height: .75; transform: rotate(-6deg); }
 .sticker small { font: 500 .65rem "DM Mono", monospace; }
 .sticker-top { top: 5%; left: 6%; }
