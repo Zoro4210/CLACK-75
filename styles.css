@@ -102,6 +102,22 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); line-height: .87; letter-spacing: -.07
 .spec-symbol { font-size: 5rem; margin: auto 0; }
 .coral { background: var(--coral); }.cream { background: var(--paper); }.purple { background: var(--purple); }.blue { background: var(--blue); }
 
+.exploded { display: grid; grid-template-columns: .82fr 1.18fr; background: var(--ink); color: white; border-bottom: var(--border); }
+.exploded-copy { padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
+.exploded-copy h2 { margin: 1.5rem 0; }
+.exploded-copy h2 span { color: var(--pink); }
+.exploded-lede { max-width: 560px; font-size: 1.1rem; line-height: 1.55; color: #ddd8ce; }
+.layer-list { margin-top: 1.5rem; border-top: 2px solid white; }
+.layer-list article { display: grid; grid-template-columns: 42px 1fr; gap: 1rem; padding: 1.15rem 0; border-bottom: 2px solid white; }
+.layer-list article > span { color: var(--yellow); font: 500 .75rem "DM Mono", monospace; }
+.layer-list h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.layer-list p { margin: 0; color: #c9c5bd; font-size: .9rem; line-height: 1.45; }
+.exploded-visual { position: relative; min-height: 760px; overflow: hidden; display: grid; place-items: center; padding: clamp(2rem, 5vw, 5rem); background-color: var(--blue); background-image: linear-gradient(rgba(17,17,15,.13) 2px, transparent 2px), linear-gradient(90deg, rgba(17,17,15,.13) 2px, transparent 2px); background-size: 44px 44px; border-left: var(--border); }
+.exploded-visual img { position: relative; z-index: 2; width: min(100%, 980px); filter: drop-shadow(14px 16px 0 rgba(17,17,15,.86)); transform: rotate(1.5deg); }
+.exploded-visual > p { position: absolute; z-index: 3; left: 2rem; bottom: 2rem; margin: 0; background: var(--paper); color: var(--ink); border: var(--border); box-shadow: 6px 6px 0 var(--ink); padding: .85rem 1rem; font: 600 .72rem/1.35 "DM Mono", monospace; transform: rotate(-2deg); }
+.layer-badge { position: absolute; z-index: 4; top: 2rem; right: 2rem; background: var(--yellow); color: var(--ink); border: var(--border); box-shadow: 6px 6px 0 var(--ink); padding: .8rem 1rem; font-size: 1.5rem; font-weight: 700; line-height: .85; transform: rotate(4deg); }
+.layer-badge small { font: 500 .63rem "DM Mono", monospace; }
+
 .configurator { display: grid; grid-template-columns: 1.05fr .95fr; border-bottom: var(--border); }
 .config-visual { min-height: 700px; border-right: var(--border); position: relative; display: grid; place-items: center; overflow: hidden; background: var(--pink); transition: background .25s; }
 .config-visual img { position: relative; z-index: 3; width: 88%; mix-blend-mode: multiply; filter: contrast(1.08) saturate(1.1); transform: rotate(-5deg); transition: filter .3s; }
@@ -168,6 +184,7 @@ footer > p { font-size: 1.5rem; margin: 1.4rem 0 0; font-weight: 700; }
   .manifesto { grid-template-columns: 1fr 1fr; }.manifesto-title { grid-column: 1 / -1; }.manifesto-card:first-of-type { border-left: 0; }.manifesto-card { border-top: var(--border); }
   .sound-lab { grid-template-columns: 1fr; }
   .spec-grid { grid-template-columns: 1fr 1fr; }
+  .exploded { grid-template-columns: 1fr; }.exploded-visual { border-left: 0; border-top: var(--border); min-height: 620px; }
   .config-visual { border-right: 0; border-bottom: var(--border); min-height: 560px; }
 }
 
@@ -180,6 +197,7 @@ footer > p { font-size: 1.5rem; margin: 1.4rem 0 0; font-weight: 700; }
   .manifesto { grid-template-columns: 1fr; }.manifesto-card { border-left: 0; min-height: 350px; }.feature-icon { font-size: 4rem; }
   .sound-lab { padding-block: 4rem; }.keys { gap: .4rem; }.test-key { border-width: 2px; box-shadow: 3px 4px 0 #000; }
   .specs-head { display: block; }.specs-head h2 { text-align: left; margin-top: 1.5rem; }.spec-grid { grid-template-columns: 1fr; }.spec-card { min-height: 300px; }
+  .exploded-visual { min-height: 430px; padding: 1.3rem; }.exploded-visual img { width: 100%; filter: drop-shadow(7px 9px 0 rgba(17,17,15,.86)); }.layer-badge { top: 1rem; right: 1rem; font-size: 1.15rem; }.exploded-visual > p { left: 1rem; bottom: 1rem; font-size: .6rem; }
   .config-visual { min-height: 390px; }.angle-label { right: 1rem; bottom: 1rem; }.swatch { width: 48px; height: 48px; }
   footer { grid-template-columns: 1fr; }.footer-logo { font-size: 22vw; }.footer-bottom { gap: 1rem; }
   .toast { right: 1rem; left: 1rem; bottom: 1rem; }
